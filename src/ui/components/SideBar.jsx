@@ -63,13 +63,13 @@ export const SideBar = ({ drawerWidth = 240 }) => {
             </ListItemIcon>
             <ListItemText primary="My Profile" />
           </ListItemButton>
-          {/* <ListItemButton>
+          <ListItemButton component={Link} to="/bookings">
             <ListItemIcon>
               <CalendarMonthIcon />
             </ListItemIcon>
             <ListItemText primary="Manage your bookings" />
           </ListItemButton>
-          <ListItemButton>
+          {/* <ListItemButton>
             <ListItemIcon>
               <GroupIcon />
             </ListItemIcon>

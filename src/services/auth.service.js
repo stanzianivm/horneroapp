@@ -81,15 +81,18 @@ export const updateUser = (userUpdate) => {
         (obj) => obj.email === userUpdate.email
       );
 
-      let userArray = usersData.find((item) => {
-        if (item.email === userUpdate.email) {
-          item.username = "pepe";
-        }
+      Object.defineProperties(usersData[userIndex], {
+        username: {
+          value: userUpdate.username,
+          // writable: false,
+          configurable: true,
+        },
+        rol: {
+          value: userUpdate.rol,
+          // writable: false,
+          configurable: true,
+        },
       });
-
-      console.log("ud", userArray);
-      // usersData[userIndex] = userUpdate.username;
-      // usersData[userIndex].rol = userUpdate.rol;
 
       const user = usersData[userIndex];
 

@@ -30,6 +30,7 @@ export const EditProfileView = () => {
     formState: { errors, isValid },
   } = useForm({
     resolver: yupResolver(schemaEdit),
+    mode: "onChange",
   });
 
   const redirectButton = (path) => {
